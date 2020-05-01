@@ -10,7 +10,9 @@
   "repository": "lexiross/fattest-cat",
   "scripts": {
     "precommit": "eslint index.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Lexi Ross",
   "keywords": [
@@ -31,11 +33,13 @@
     "lodash": "^4.17.4",
     "opener": "^1.4.3",
     "request": "^2.79.0",
-    "request-promise": "^4.1.1"
+    "request-promise": "^4.1.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "eslint": "^3.16.1",
     "eslint-config-classdojo": "^1.2.4",
     "husky": "^0.13.2"
-  }
+  },
+  "snyk": true
 }
